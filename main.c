@@ -76,12 +76,7 @@ int main() {
                 );
 
                 break;
-
-            case 4:
-
-                printf("Fibonacci sera implementada posteriormente.\n");
-                break;
-
+            
             case 0:
 
                 printf("Encerrando o Arithmos...\n");
