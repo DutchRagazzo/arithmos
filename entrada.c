@@ -14,7 +14,6 @@ void exibirMenu() {
     printf("1. Transformacao de Euler\n");
     printf("2. Transformacao por numeros primos\n");
     printf("3. Exibir historico\n");
-    printf("4. Fibonacci (em desenvolvimento)\n");
     printf("0. Finalizar programa\n");
 
     printf("================================\n");
