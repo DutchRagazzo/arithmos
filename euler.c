@@ -147,13 +147,27 @@ int executarEuler(char resultado[], double *entrada) {
 
     printf("\n1. SOMA\n");
     printf("Valor encontrado: %.10f\n", valorSoma);
-    printf("Interpretacao: %.10f + %.10f = %.10f.\n",
-           numero, valorSoma, euler);
+
+        if(valorSoma < 0){
+            printf("Interpretacao: %.10f + (%.10f) = %.10f.\n",
+            numero, valorSoma, euler);
+        }
+        else{
+            printf("Interpretacao: %.10f + %.10f = %.10f.\n",
+            numero, valorSoma, euler);
+        }
 
     printf("\n2. SUBTRACAO\n");
     printf("Valor encontrado: %.10f\n", valorSubtracao);
-    printf("Interpretacao: %.10f - %.10f = %.10f.\n",
-           numero, valorSubtracao, euler);
+
+        if(valorSubtracao < 0){
+            printf("Interpretacao: %.10f - (%.10f) = %.10f.\n",
+            numero, valorSubtracao, euler);
+        }
+        else{
+            printf("Interpretacao: %.10f - %.10f = %.10f.\n",
+            numero, valorSubtracao, euler);
+        }    
 
     printf("\n3. PRODUTO\n");
     printf("Valor encontrado: %.10f\n", valorProduto);
