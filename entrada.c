@@ -20,6 +20,7 @@ void exibirMenu() {
 }
 
 // Recebe a opcao escolhida pelo usuario
+//Utiliza uma condicional para caso o usuario escolha uma opcao invalida
 int lerOpcao() {
 
     int opcao;
