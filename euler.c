@@ -10,7 +10,7 @@ const double PI = 3.14159265358979323846;
    TRANSFORMACAO DE EULER
    ========================================== */
 
-// Calcul o valor da incognita, tal que: numero + incognita = euler
+// Calcula o valor da incognita, tal que: numero + incognita = euler
 void soma(double numero, double *incognita) {
 
     // numero + incognita = euler
