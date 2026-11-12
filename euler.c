@@ -10,95 +10,108 @@ const double PI = 3.14159265358979323846;
    TRANSFORMACAO DE EULER
    ========================================== */
 
-// Calcula o valor de X, tal que: X + numero_entrada = euler
-double soma(double numero) {
+// Calcula o valor desconhecido da soma
+void soma(double numero, double *incognita) {
 
     // numero + incognita = euler
     // incognita = euler - numero
 
-    return euler - numero;
+    *incognita = euler - numero;
 }
 
-// Calcula o valor de X, tal que: X - numero_entrada = euler
-double subtracao(double numero) {
+// Calcula o valor desconhecido da subtracao
+void subtracao(double numero, double *incognita) {
 
     // numero - incognita = euler
     // incognita = numero - euler
 
-    return numero - euler;
+    *incognita = numero - euler;
 }
 
-// Calcula o valor de X, tal que: X * numero_entrada = euler
-double produto(double numero) {
+// Calcula o valor desconhecido do produto
+void produto(double numero, double *incognita) {
 
     // numero * incognita = euler
     // incognita = euler / numero
 
-    return euler / numero;
+    *incognita = euler / numero;
 }
 
-// Calcula o valor de X, tal que: X / numero_entrada = euler
-double divisao(double numero) {
+// Calcula o valor desconhecido da divisao
+void divisao(double numero, double *incognita) {
 
     // numero / incognita = euler
     // incognita = numero / euler
 
-    return numero / euler;
+    *incognita = numero / euler;
 }
 
-// Calcula o valor de X, tal que: (numero_entrada) ^ X = euler
-double potencia(double numero) {
+// Calcula o expoente necessario para obter Euler
+void potencia(double numero, double *incognita) {
 
     // numero ^ incognita = euler
     // incognita = log(euler) / log(numero)
 
     if (numero <= 0 || numero == 1) {
-        return NAN;
+        *incognita = NAN;
+        return;
     }
 
-    return 1.0 / log(numero);
+    *incognita = 1.0 / log(numero);
 }
 
 // Calcula o logaritmo na base Euler
-double raiz(double numero) {
+void raiz(double numero, double *incognita) {
 
     // euler ^ incognita = numero
     // incognita = log(numero) / log(euler)
 
     if (numero <= 0) {
-        return NAN;
+        *incognita = NAN;
+        return;
     }
 
-    return log(numero) / log(euler);
+    *incognita = log(numero) / log(euler);
 }
 
 // Calcula o angulo da primeira relacao: N / euler = sen(X)
-double trigonometrica1(double numero) {
+void trigonometrica1(double numero, double *incognita) {
     double seno = numero / euler;
-    if (seno < -1 || seno > 1) return NAN;
-    return asin(seno) * 180.0 / PI;
+    if (seno < -1 || seno > 1) {
+        *incognita = NAN;
+        return;
+    }
+    *incognita = asin(seno) * 180.0 / PI;
 }
 
 // Calcula o angulo da segunda relacao: N * sen(X) = euler
-double trigonometrica2(double numero) {
+void trigonometrica2(double numero, double *incognita) {
     double seno = euler / numero;
-    if (seno < -1 || seno > 1) return NAN;
-    return asin(seno) * 180.0 / PI;
+    if (seno < -1 || seno > 1) {
+        *incognita = NAN;
+        return;
+    }
+    *incognita = asin(seno) * 180.0 / PI;
 }
 
-
 // Calcula o angulo da primeira relacao: N / euler = cos(X)
-double trigonometrica3(double numero) {
+void trigonometrica3(double numero, double *incognita) {
     double cosseno = numero / euler;
-    if (cosseno < -1 || cosseno > 1) return NAN;
-    return acos(cosseno) * 180.0 / PI;
+    if (cosseno < -1 || cosseno > 1) {
+        *incognita = NAN;
+        return;
+    }
+    *incognita = acos(cosseno) * 180.0 / PI;
 }
 
 // Calcula o angulo da segunda relacao: N * cos(X) = euler
-double trigonometrica4(double numero) {
+void trigonometrica4(double numero, double *incognita) {
     double cosseno = euler / numero;
-    if (cosseno < -1 || cosseno > 1) return NAN;
-    return acos(cosseno) * 180.0 / PI;
+    if (cosseno < -1 || cosseno > 1) {
+        *incognita = NAN;
+        return;
+    }
+    *incognita = acos(cosseno) * 180.0 / PI;
 }
 
 // Funcao mae da transformacao de Euler
@@ -119,16 +132,16 @@ int executarEuler(char resultado[], double *entrada) {
     *entrada = numero;
 
     // Calcula os resultados usando as funcoes auxiliares
-    valorSoma = soma(numero);
-    valorSubtracao = subtracao(numero);
-    valorProduto = produto(numero);
-    valorDivisao = divisao(numero);
-    valorPotencia = potencia(numero);
-    valorRaiz = raiz(numero);
-    angulo1 = trigonometrica1(numero);
-    angulo2 = trigonometrica2(numero);
-    angulo3 = trigonometrica3(numero);
-    angulo4 = trigonometrica4(numero);
+    soma(numero,&valorSoma);
+    subtracao(numero,&valorSubtracao);
+    produto(numero,&valorProduto);
+    divisao(numero,&valorDivisao);
+    potencia(numero,&valorPotencia);
+    raiz(numero,&valorRaiz);
+    trigonometrica1(numero,&angulo1);
+    trigonometrica2(numero,&angulo2);
+    trigonometrica3(numero,&angulo3);
+    trigonometrica4(numero,&angulo4);
 
     printf("\n========== OPERACOES ARITMETICAS ==========\n");
 
