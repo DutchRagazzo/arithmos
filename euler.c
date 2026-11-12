@@ -10,7 +10,7 @@ const double PI = 3.14159265358979323846;
    TRANSFORMACAO DE EULER
    ========================================== */
 
-// Calcula o valor desconhecido da soma
+// Calcula o valor de X, tal que: X + numero_entrada = euler
 double soma(double numero) {
 
     // numero + incognita = euler
@@ -19,7 +19,7 @@ double soma(double numero) {
     return euler - numero;
 }
 
-// Calcula o valor desconhecido da subtracao
+// Calcula o valor de X, tal que: X - numero_entrada = euler
 double subtracao(double numero) {
 
     // numero - incognita = euler
@@ -28,7 +28,7 @@ double subtracao(double numero) {
     return numero - euler;
 }
 
-// Calcula o valor desconhecido do produto
+// Calcula o valor de X, tal que: X * numero_entrada = euler
 double produto(double numero) {
 
     // numero * incognita = euler
@@ -37,7 +37,7 @@ double produto(double numero) {
     return euler / numero;
 }
 
-// Calcula o valor desconhecido da divisao
+// Calcula o valor de X, tal que: X / numero_entrada = euler
 double divisao(double numero) {
 
     // numero / incognita = euler
@@ -46,7 +46,7 @@ double divisao(double numero) {
     return numero / euler;
 }
 
-// Calcula o expoente necessario para obter Euler
+// Calcula o valor de X, tal que: (numero_entrada) ^ X = euler
 double potencia(double numero) {
 
     // numero ^ incognita = euler
