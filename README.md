@@ -19,7 +19,7 @@ O Arithmos está sendo desenvolvido em etapas. A Etapa 1 contempla as funcionali
 ### 1.1. Regras de negócio
 
 - O usuário acessa as funcionalidades por meio de um menu principal.
-- Na transformação de Euler, o usuário informa um número real positivo. O sistema calcula os valores que satisfazem as relações matemáticas definidas com a constante de Euler, \(e \approx 2{,}7182818284\), e apresenta os resultados acompanhados de interpretações textuais.
+- Na transformação de Euler, o usuário informa um número real positivo. O sistema calcula os valores que satisfazem as relações matemáticas definidas com a constante de Euler, \(e \approx 2,7182818284\), e apresenta os resultados acompanhados de interpretações textuais.
 - As transformações de Euler contemplam soma, subtração, produto, divisão, potência, logaritmo na base Euler e duas relações trigonométricas.
 - Nas operações trigonométricas, o programa verifica se há solução real antes de calcular o ângulo. Os ângulos são apresentados em graus.
 - Na funcionalidade de números primos, o usuário pode verificar se um número inteiro é primo ou solicitar a geração dos primeiros \(N\) números primos.
