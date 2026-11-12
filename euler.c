@@ -10,7 +10,7 @@ const double PI = 3.14159265358979323846;
    TRANSFORMACAO DE EULER
    ========================================== */
 
-// Calcula o valor desconhecido da soma
+// Calcul o valor da incognita, tal que: numero + incognita = euler
 void soma(double numero, double *incognita) {
 
     // numero + incognita = euler
@@ -19,7 +19,7 @@ void soma(double numero, double *incognita) {
     *incognita = euler - numero;
 }
 
-// Calcula o valor desconhecido da subtracao
+// Calcula o valor da incognita, tal que: numero - incognita = euler
 void subtracao(double numero, double *incognita) {
 
     // numero - incognita = euler
@@ -28,7 +28,7 @@ void subtracao(double numero, double *incognita) {
     *incognita = numero - euler;
 }
 
-// Calcula o valor desconhecido do produto
+// Calcula o valor da incognita, tal que: numero * incognita = euler
 void produto(double numero, double *incognita) {
 
     // numero * incognita = euler
@@ -37,7 +37,7 @@ void produto(double numero, double *incognita) {
     *incognita = euler / numero;
 }
 
-// Calcula o valor desconhecido da divisao
+// Calcula o valor da incognita, tal que: numero / incognita = euler
 void divisao(double numero, double *incognita) {
 
     // numero / incognita = euler
@@ -46,7 +46,7 @@ void divisao(double numero, double *incognita) {
     *incognita = numero / euler;
 }
 
-// Calcula o expoente necessario para obter Euler
+// Calcula o valor da incognita, tal que: (numero) ^ incognita = euler 
 void potencia(double numero, double *incognita) {
 
     // numero ^ incognita = euler
@@ -60,7 +60,7 @@ void potencia(double numero, double *incognita) {
     *incognita = 1.0 / log(numero);
 }
 
-// Calcula o logaritmo na base Euler
+// Calcula o logaritmo na base Euler, tal que: (numero) ^ 1/2 = euler
 void raiz(double numero, double *incognita) {
 
     // euler ^ incognita = numero
@@ -131,7 +131,7 @@ int executarEuler(char resultado[], double *entrada) {
     // Guarda o numero para o historico sem pedir novamente
     *entrada = numero;
 
-    // Calcula os resultados usando as funcoes auxiliares
+    // Calcula os resultados usando as funcoes auxiliares, sob o parâmetro do valor de entrada e do ponteiro dos valores de saida
     soma(numero,&valorSoma);
     subtracao(numero,&valorSubtracao);
     produto(numero,&valorProduto);
