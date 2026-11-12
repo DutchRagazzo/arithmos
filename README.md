@@ -76,6 +76,8 @@ Os elementos de mesma posição correspondem ao mesmo registro. Dessa forma, o s
 | `raiz(numero)` | Recebe um número real por valor e calcula o logaritmo do número informado na base Euler. | Retorna o resultado do logaritmo. |
 | `trigonometrica1(numero)` | Recebe um número real por valor e calcula o ângulo cujo seno corresponde a `numero / e`. | Retorna o ângulo em graus, quando existe solução real. |
 | `trigonometrica2(numero)` | Recebe um número real por valor e calcula o ângulo cujo seno, multiplicado pelo número informado, resulta em Euler; portanto, utiliza `e / numero` como valor do seno. | Retorna o ângulo em graus, quando existe solução real. |
+| `trigonometrica3(numero)` | Recebe um número real por valor e calcula o ângulo cujo cosseno corresponde a `numero / e`. | Retorna o ângulo em graus, quando existe solução real. |
+| `trigonometrica4(numero)` | Recebe um número real por valor e calcula o ângulo cujo cosseno, multiplicado pelo número informado, resulta em Euler; portanto, utiliza `e / numero` como valor do cosseno. | Retorna o ângulo em graus, quando existe solução real. |
 | `executarEuler(resultado, entrada)` | Coordena a leitura e validação do número, chama as funções auxiliares, apresenta os resultados e suas interpretações. Recebe `resultado` para preencher o resumo e `entrada` como ponteiro para devolver o número informado ao programa principal. | Apresenta as transformações de Euler e fornece os dados para o histórico. |
 
 ### 2.5. Passagem de parâmetros
