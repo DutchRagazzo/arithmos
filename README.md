@@ -2,7 +2,7 @@
 
 **Curso:** Engenharia de Robôs — Universidade Federal da Paraíba (UFPB)  
 **Disciplina:** Laboratório de Programação em C  
-**Desenvolvedores:** Gabriel Holanda e Vinícius Wallach  
+**Desenvolvedores:** Gabriel Holanda e Vinícius Wallach.  
 **Etapa:** 1  
 **Status:** Projeto em desenvolvimento — a segunda parte ainda será implementada.
 
