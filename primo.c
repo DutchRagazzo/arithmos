@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "primo.h"
 #include "entrada.h"
+
+// Retorna 1 para numeros primos e 0 para numeros nao primos
 int ehPrimo(int numero) {
 
     // Numeros menores ou iguais a 1 nao sao primos
