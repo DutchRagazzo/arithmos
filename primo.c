@@ -3,7 +3,7 @@
 #include "entrada.h"
 
 // Retorna 1 para numeros primos e 0 para numeros nao primos
-int ehPrimo(int numero) {
+int verificadorPrimo(int numero) {
 
     // Numeros menores ou iguais a 1 nao sao primos
     if (numero <= 1) {
@@ -31,12 +31,13 @@ int ehPrimo(int numero) {
     return 1;
 }
 
-// Encontra o proximo numero primo
+// Encontra o proximo numero primo depois de "numero"
+// (agora recebe o valor, e nao um ponteiro, e devolve o resultado)
 int proximoPrimo(int numero) {
 
     numero++;
 
-    while (!ehPrimo(numero)) {
+    while (!verificadorPrimo(numero)) {
         numero++;
     }
 
@@ -73,12 +74,12 @@ int executarPrimo(char resultado[], double *entrada) {
 
         *entrada = numero;
 
-        if (ehPrimo(numero)) {
+        if (verificadorPrimo(numero)) {
 
             printf("%d e um numero primo.\n", numero);
 
             snprintf(resultado, 200, "%d e um numero primo", numero);
-                     
+
         } else {
 
             printf("%d nao e um numero primo.\n", numero);
